@@ -1,8 +1,10 @@
 //use num::integer::Roots;
 
 extern crate primes;
+extern crate palindrome;
 
 use primes::is_prime;
+use palindrome::is_palindrome;
 
 // https://projecteuler.net/problem=1
 pub fn problem1(limit: i32) -> i32 {
@@ -51,6 +53,63 @@ pub fn problem3(input: i64) -> i64 {
 }
 
 // https://projecteuler.net/problem=4
+pub fn problem4() -> u64 {
+    let mut num;
+    let mut palindrome = 0;
+    for i in 100..=999 {
+        for j in 100..=999 {
+            num = i * j;
+            if is_palindrome(num) && num > palindrome {
+                palindrome = num;
+            }
+        }
+    }
+    return palindrome;
+}
+
+
+/*pub fn problem4() -> u64 {
+    let mut number1 = 999;
+    let mut number2 = 999;
+    let mut found = false;
+    let mut num = 0;
+    let mut palindrome = 0;
+
+    while !found && number1>=100{
+        num = number1 * number2;
+        if is_palindrome(num) {
+            found = true;
+            if num > palindrome {
+                palindrome = num;
+            }
+        } 
+        if number2 >= 100 {
+            number2 -=1;
+        } else {
+            number1 -=1;
+            number2 = 999;
+        }
+    }
+
+    return num;
+}*/
 
 
 // https://projecteuler.net/problem=5
+
+pub fn problem5() -> u64 {
+    let mut number: u64 = 20;
+    let mut found = false;
+    while !found {
+        found = true;
+        number += 1;
+        
+        for i in 1..=20 {
+            if number % i != 0 {
+                found = false
+            }      
+        }
+    }
+    println!("{}", number);
+    return number; 
+}

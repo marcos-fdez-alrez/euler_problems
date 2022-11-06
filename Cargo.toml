@@ -11,3 +11,4 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 wasm-bindgen = "0.2.83"
 primes = "0.3.0"
+palindrome = "0.1.1"

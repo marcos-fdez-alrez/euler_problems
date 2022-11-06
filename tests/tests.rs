@@ -15,12 +15,13 @@ fn test_problem3() {
     assert_eq!(euler_problems::problem3(600851475143), 6857);
 }
 
-//#[test]
-//fn test_problem4() {
-//    assert_eq!(add(1, 2), 906609);
-//}
+#[test]
+fn test_problem4() {
+    println!("valor: {}",euler_problems::problem4());
+    assert_eq!(euler_problems::problem4(), 906609);
+}
 
-//#[test]
-//fn test_problem5() {
-//    assert_eq!(add(1, 2), 232792560);
-//}
+#[test]
+fn test_problem5() {
+    assert_eq!(euler_problems::problem5(), 232792560);
+}
